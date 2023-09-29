@@ -1,5 +1,11 @@
 # Guideline for Conribution
 
+## Start project
+```bash
+yarn
+yarn dev
+```
+
 아래 사항을 참고해주세요.
 
 ## ✏️ Commit Convention
