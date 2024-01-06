@@ -18,6 +18,7 @@ export const GlobalStyles = createGlobalStyle`
     display: flex;
     cursor: pointer;
     outline: none;
+    border: none;
   }
   
   input{

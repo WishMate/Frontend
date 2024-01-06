@@ -17,10 +17,10 @@ export default function NavBar() {
       {/* 로그인 및 회원가입 */}
       <SignContainer>
         <Link to="/signin">
-          <h2>로그인</h2>
+          <SignButton1>Sign In</SignButton1>
         </Link>
         <Link to="/signup">
-          <h2>회원가입</h2>
+          <SignButton2>Sign Up</SignButton2>
         </Link>
       </SignContainer>
     </NavContainer>
@@ -28,9 +28,9 @@ export default function NavBar() {
 }
 
 const NavContainer = styled.div`
-  ${({ theme }) => theme.flexRowSet()}
+  ${({ theme }) => theme.flexRowSet("space-between", "center")}
   font-size: ${({ theme }) => theme.calcRem(20)};
-  color: ${({ theme }) => theme.colors.red};
+  color: ${({ theme }) => theme.colors.black};
   background-color: ${({ theme }) => theme.colors.white};
   padding: ${({ theme }) => theme.calcRem(20)};
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -44,7 +44,7 @@ const LogoContainer = styled.div`
 const ImageContainer = styled.div`
   margin-right: ${({ theme }) => theme.calcRem(10)};
   img {
-    width: ${({ theme }) => theme.calcRem(40)};
+    width: ${({ theme }) => theme.calcRem(50)};
     height: auto;
   }
 `;
@@ -52,27 +52,31 @@ const ImageContainer = styled.div`
 const LogoTextContainer = styled.div`
   h2 {
     font-family: "Modak";
+    font-size: ${({ theme }) => theme.calcRem(35)};
     margin: 0;
   }
 `;
 
 const SignContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
+  ${({ theme }) => theme.flexRowSet()}
   a {
     text-decoration: none;
     color: ${({ theme }) => theme.colors.black};
-    margin: 0 ${({ theme }) => theme.calcRem(10)};
-    h2 {
-      margin: 0;
-      font-weight: bold;
-      cursor: pointer;
-      transition: color 0.3s ease;
-      &:hover {
-        color: ${({ theme }) => theme.colors.blue};
-      }
-    }
   }
+`;
+
+const SignButton1 = styled.button`
+  padding: ${({ theme }) => theme.calcRem(10)} ${({ theme }) => theme.calcRem(20)};
+  font-size: ${({ theme }) => theme.calcRem(20)};
+  font-weight: 600;
+  background-color: ${({ theme }) => theme.colors.black};
+  color: ${({ theme }) => theme.colors.white};
+  border-radius: ${({ theme }) => theme.calcRem(30)};
+`;
+
+const SignButton2 = styled.button`
+  padding: ${({ theme }) => theme.calcRem(10)} ${({ theme }) => theme.calcRem(20)};
+  font-size: ${({ theme }) => theme.calcRem(20)};
+  font-weight: 600;
+  background-color: ${({ theme }) => theme.colors.white};
 `;
