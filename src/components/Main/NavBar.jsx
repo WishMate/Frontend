@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/img/logo.png";
 
 export default function NavBar() {
   return (
@@ -51,6 +51,7 @@ const ImageContainer = styled.div`
 
 const LogoTextContainer = styled.div`
   h2 {
+    font-family: "Modak";
     margin: 0;
   }
 `;
