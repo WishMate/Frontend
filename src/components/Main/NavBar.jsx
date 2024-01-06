@@ -32,7 +32,7 @@ const NavContainer = styled.div`
   font-size: ${({ theme }) => theme.calcRem(20)};
   color: ${({ theme }) => theme.colors.black};
   background-color: ${({ theme }) => theme.colors.white};
-  padding: ${({ theme }) => theme.calcRem(20)};
+  padding: ${({ theme }) => theme.calcRem(15)};
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 `;
 
@@ -69,14 +69,14 @@ const SignButton1 = styled.button`
   padding: ${({ theme }) => theme.calcRem(10)} ${({ theme }) => theme.calcRem(20)};
   font-size: ${({ theme }) => theme.calcRem(20)};
   font-weight: 600;
-  background-color: ${({ theme }) => theme.colors.black};
-  color: ${({ theme }) => theme.colors.white};
-  border-radius: ${({ theme }) => theme.calcRem(30)};
+  background-color: ${({ theme }) => theme.colors.white};
 `;
 
 const SignButton2 = styled.button`
   padding: ${({ theme }) => theme.calcRem(10)} ${({ theme }) => theme.calcRem(20)};
   font-size: ${({ theme }) => theme.calcRem(20)};
   font-weight: 600;
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.black};
+  color: ${({ theme }) => theme.colors.white};
+  border-radius: ${({ theme }) => theme.calcRem(30)};
 `;
